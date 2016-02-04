@@ -11,3 +11,21 @@ $(document).ready(function() {
     $("#cat-out").fadeToggle();
   });
 });
+
+$(document).ready(function() {
+
+  $("button").click(function() {
+    $("ul#you").prepend("<li>hi</li>");
+    $("ul#web").prepend("<li>bye</li>");
+
+    $("ul#you").children("li").first().click(function() {
+      $(this).remove();
+    });
+    $("ul#web").children("li").first().click(function() {
+      $(this).remove();
+    });
+
+
+  });
+
+});
